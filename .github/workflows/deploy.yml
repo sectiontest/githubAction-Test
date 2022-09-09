@@ -19,9 +19,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
-      # working-directory: ./
-      APPLICATION: ${{ secrets.APPLICATION }}
 
     steps:
       - uses: actions/checkout@v3
@@ -30,16 +27,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
-
-      # - uses: actions/checkout@v2
-      # - run: touch ./src/main/resources/application.properties
-      # - run: echo "${{ env.APPLICATION }}" > ./src/main/resources/application.properties
-
-      # - uses: actions/upload-artifact@v2
-      #   with:
-      #     name: application.properties
-      #     path: ./src/main/resources/application.properties
-
+          
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
         shell: bash
