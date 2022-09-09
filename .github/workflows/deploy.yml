@@ -20,7 +20,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env: 
-      working-directory: ./
+      # working-directory: ./
       APPLICATION: ${{ secrets.APPLICATION }}
 
     steps:
