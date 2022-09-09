@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
-    @Value("${test.abc}")
-    private String testMsg;
+//    @Value("${test.abc}")
+//    private String testMsg;
 
     @GetMapping("/hello")
     public String helloWorld() {
         return "test hello";
     }
 
-    @GetMapping("/test")
-    public String testWorld() {
-        return testMsg;
-    }
+//    @GetMapping("/test")
+//    public String testWorld() {
+//        return testMsg;
+//    }
 }
