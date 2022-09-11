@@ -15,4 +15,9 @@ public class MainService {
         return String.valueOf(memberRepository.findByName(name));
     }
 
+    public void InputMember(String name) {
+        Member newMember = Member.builder().name(name).build();
+        memberRepository.save(newMember);
+    }
+
 }
